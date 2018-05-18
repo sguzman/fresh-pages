@@ -13,6 +13,12 @@ install:
   - sudo cp ./brotli /bin
   - git config --global user.email "guzmansalv@gmail.com"
   - git config --global user.name "Salvador Guzman"
-  - cd ..
+  - git clone 'https://github.com/sguzman/fresh-pages-snapshot'
+  - cd ./fresh-pages-snapshot/
+  - for i in *.txt.brotli; do cat ${i} | brotli -d; done | brotli > ./pages.brotli
+  - git add pages.brotli
+  - git commit -m 'Added snapshot'
+  - git remote set-url origin ${PASS}
+  - git push
 script:
-  - sudo bash ./main.sh
+  - echo 'done'
