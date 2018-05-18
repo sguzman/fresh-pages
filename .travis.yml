@@ -4,7 +4,7 @@ sudo: required
 
 install:
   - sudo apt-get update
-  - sudo add-apt-repository --force-yes ppa:eugenesan/ppa
+  - sudo add-apt-repository --yes ppa:eugenesan/ppa
   - sudo apt-get install -y brotli
 script:
   - bash -x main.sh
