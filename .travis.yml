@@ -15,10 +15,10 @@ install:
   - git config --global user.name "Salvador Guzman"
   - git clone 'https://github.com/sguzman/fresh-pages-snapshot'
   - cd ./fresh-pages-snapshot/
-  - for i in *.txt.brotli; do cat ${i} | brotli -d; done | brotli > ./pages.brotli
+  - for i in ../*.txt.brotli; do cat ${i} | brotli -d; done | brotli > ./pages.brotli
   - git add pages.brotli
   - git commit -m 'Added snapshot'
-  - git remote set-url origin ${PASS}
+  - git remote set-url origin $PASS
   - git push
 script:
   - echo 'done'
