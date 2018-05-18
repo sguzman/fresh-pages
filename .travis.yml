@@ -1,0 +1,6 @@
+language: generic
+
+sudo: required
+
+script:
+  - bash -x main.sh
