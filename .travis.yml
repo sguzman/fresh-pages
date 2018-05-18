@@ -11,5 +11,8 @@ install:
   - cmake .
   - make
   - sudo cp ./brotli /bin
+  - git config --global user.email "guzmansalv@gmail.com"
+  - git config --global user.name "Salvador Guzman"
+  - ls
 script:
-  - bash -x main.sh
+  - sudo bash -x ./main.sh
