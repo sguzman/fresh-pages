@@ -1,12 +1,15 @@
 language: generic
-dist: trusty
 
 sudo: required
 
 install:
   - sudo apt-get update
-  - sudo add-apt-repository --yes ppa:eugenesan/ppa
-  - sudo apt-get update
-  - sudo apt-get install -y brotli
+  - sudo apt-get install -y wget cmake
+  - wget https://github.com/google/brotli/archive/v1.0.4.tar.gz
+  - tar zxvf v1.0.4.tar.gz
+  - cd brotli-1.0.4
+  - cmake .
+  - make
+  - sudo cp ./brotli /bin
 script:
   - bash -x main.sh
