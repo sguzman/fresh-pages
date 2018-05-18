@@ -9,4 +9,4 @@ done | brotli > ./fresh-pages-snapshot/pages.brotli
 cd ./fresh-pages-snapshot/
 git add pages.brotli
 git commit -m 'Added snapshot'
-SHELL=bash expect -f ../script.exp
+SHELL=bash expect -f ./script.exp
