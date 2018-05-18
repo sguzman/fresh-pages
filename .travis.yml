@@ -4,7 +4,7 @@ sudo: required
 
 install:
   - sudo apt-get update
-  - sudo apt-get install -y wget cmake
+  - sudo apt-get install -y wget cmake expect
   - wget https://github.com/google/brotli/archive/v1.0.4.tar.gz
   - tar zxvf v1.0.4.tar.gz
   - cd brotli-1.0.4
@@ -14,6 +14,5 @@ install:
   - git config --global user.email "guzmansalv@gmail.com"
   - git config --global user.name "Salvador Guzman"
   - cd ..
-  - ls
 script:
   - sudo bash ./main.sh
