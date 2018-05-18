@@ -14,5 +14,6 @@ install:
   - git config --global user.email "guzmansalv@gmail.com"
   - git config --global user.name "Salvador Guzman"
   - cd ..
+  - ls
 script:
   - sudo bash ./main.sh
