@@ -4,7 +4,7 @@ sudo: required
 
 install:
   - sudo apt-get update
-  - sudo apt-get install -y wget cmake expect
+  - sudo apt-get install -y wget cmake
   - wget https://github.com/google/brotli/archive/v1.0.4.tar.gz
   - tar zxvf v1.0.4.tar.gz
   - cd brotli-1.0.4
